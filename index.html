@@ -723,23 +723,30 @@
     }
 
     function saveQuoteAndGo() {
-      calculateLiveQuote();
+  calculateLiveQuote();
 
-      const systemSelect = document.getElementById('prompter-type');
-      const selectedSystem = encodeURIComponent(systemSelect.options[systemSelect.selectedIndex].text);
+  const systemSelect = document.getElementById('prompter-type');
+  const selectedSystem = systemSelect.options[systemSelect.selectedIndex].text;
 
-      const extraMonitorSelect = document.getElementById('extra-monitors');
-      const selectedExtras = encodeURIComponent(extraMonitorSelect.options[extraMonitorSelect.selectedIndex]
-        ? extraMonitorSelect.options[extraMonitorSelect.selectedIndex].text
-        : "None");
+  const extraMonitorSelect = document.getElementById('extra-monitors');
+  const selectedExtras = extraMonitorSelect.options[extraMonitorSelect.selectedIndex]
+    ? extraMonitorSelect.options[extraMonitorSelect.selectedIndex].text
+    : "None";
 
-      const daysSelect = document.getElementById('shoot-days');
-      const selectedDays = encodeURIComponent(daysSelect.options[daysSelect.selectedIndex].text);
+  const daysSelect = document.getElementById('shoot-days');
+  const selectedDays = daysSelect.options[daysSelect.selectedIndex].text;
 
-      const total = encodeURIComponent(document.getElementById('calculated-total').innerText || "Custom Quote");
+  const total = document.getElementById('calculated-total').innerText || "Custom Quote";
 
-      window.location.href = `https://www.teleprompterrental.com/get-in-touch?system=${selectedSystem}&duration=${selectedDays}&extras=${selectedExtras}&total=${total}`;
-    }
+  // Save data seamlessly into browser session memory
+  sessionStorage.setItem('calc_system', selectedSystem);
+  sessionStorage.setItem('calc_duration', selectedDays);
+  sessionStorage.setItem('calc_extras', selectedExtras);
+  sessionStorage.setItem('calc_total', total);
+
+  // Redirect to a completely clean URL with no messy question marks
+  window.location.href = 'https://www.teleprompterrental.com/get-in-touch?';
+}
 
     document.addEventListener("DOMContentLoaded", function() {
       handleSystemChange();
