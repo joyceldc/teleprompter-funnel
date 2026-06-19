@@ -187,7 +187,7 @@
             font-size: 1rem;
         }
 
-        /* Widget Custom Embedded Fixes */
+        /* Widget CSS Layout Styles */
         .instant-quote-widget {
             background: #ffffff;
             border: 1px solid #e5e5e5;
@@ -474,7 +474,6 @@
             </div>
         </div>
 
-        <!-- INSTANT QUOTE WIDGET BLOCK -->
         <div class="instant-quote-widget">
           <h3>Instant Rate Calculator</h3>
           <p class="widget-subtitle">Select your production setup to view standard base rates.</p>
@@ -605,7 +604,6 @@
         <p>&copy; 2026 TeleprompterRental.com. All Rights Reserved. All equipment deployments subject to regional logistics availability and booking confirmations.</p>
     </footer>
 
-    <!-- WIDGET SCRIPT LOGIC -->
     <script>
     function handleSystemChange() {
       const systemSelect = document.getElementById('prompter-type');
@@ -723,30 +721,24 @@
     }
 
     function saveQuoteAndGo() {
-  calculateLiveQuote();
+      calculateLiveQuote();
 
-  const systemSelect = document.getElementById('prompter-type');
-  const selectedSystem = systemSelect.options[systemSelect.selectedIndex].text;
+      const systemSelect = document.getElementById('prompter-type');
+      const selectedSystem = encodeURIComponent(systemSelect.options[systemSelect.selectedIndex].text);
 
-  const extraMonitorSelect = document.getElementById('extra-monitors');
-  const selectedExtras = extraMonitorSelect.options[extraMonitorSelect.selectedIndex] 
-    ? extraMonitorSelect.options[extraMonitorSelect.selectedIndex].text 
-    : "None";
+      const extraMonitorSelect = document.getElementById('extra-monitors');
+      const selectedExtras = encodeURIComponent(extraMonitorSelect.options[extraMonitorSelect.selectedIndex]
+        ? extraMonitorSelect.options[extraMonitorSelect.selectedIndex].text
+        : "None");
 
-  const daysSelect = document.getElementById('shoot-days');
-  const selectedDays = daysSelect.options[daysSelect.selectedIndex].text;
+      const daysSelect = document.getElementById('shoot-days');
+      const selectedDays = encodeURIComponent(daysSelect.options[daysSelect.selectedIndex].text);
 
-  const total = document.getElementById('calculated-total').innerText || "Custom Quote";
+      const total = encodeURIComponent(document.getElementById('calculated-total').innerText || "Custom Quote");
 
-  // Hold data in browser tab memory
-  sessionStorage.setItem('calc_system', selectedSystem);
-  sessionStorage.setItem('calc_duration', selectedDays);
-  sessionStorage.setItem('calc_extras', selectedExtras);
-  sessionStorage.setItem('calc_total', total);
-
-// Redirect to a completely clean URL with no messy question marks
-  window.location.href = 'https://www.teleprompterrental.com/get-in-touch';
-}
+      // Original query parameters string pass structure
+      window.location.href = `https://www.teleprompterrental.com/get-in-touch?system=${selectedSystem}&duration=${selectedDays}&extras=${selectedExtras}&total=${total}`;
+    }
 
     document.addEventListener("DOMContentLoaded", function() {
       handleSystemChange();
