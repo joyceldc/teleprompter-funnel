@@ -6,8 +6,8 @@
     <title>Professional Teleprompter Rentals & Operators | Broadcast Grade</title>
     <style>
         :root {
-            --primary: #c5a059;
-            --primary-dark: #222222;
+            --primary: #0066cc;
+            --primary-dark: #004499;
             --dark: #111111;
             --light: #f8f9fa;
             --gray: #555555;
@@ -73,7 +73,7 @@
 
         .badge {
             display: inline-block;
-            background-color: #fcf9f2;
+            background-color: #e6f0fa;
             color: var(--primary);
             padding: 6px 16px;
             border-radius: 20px;
@@ -82,7 +82,6 @@
             margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            border: 1px solid #f0e6d2;
         }
 
         h1 {
@@ -269,7 +268,7 @@
         }
 
         #calculated-total a {
-            color: #c5a059;
+            color: var(--primary);
             text-decoration: underline;
             font-size: 20px;
         }
@@ -286,7 +285,7 @@
             border: none !important;
             display: block;
             text-align: center;
-            background: #c5a059 !important;
+            background: var(--primary) !important;
             color: #ffffff !important;
             text-decoration: none;
             padding: 14px;
@@ -298,7 +297,7 @@
         }
 
         .book-now-button:hover {
-            background: #222222 !important;
+            background: var(--primary-dark) !important;
         }
 
         /* Fleet Grid Section */
@@ -427,7 +426,7 @@
     <header>
         <div class="logo">Teleprompter<span>Rental</span>.com</div>
         <div class="header-contact">
-            <a href="tel:18005550199" class="phone-link">Direct Dispatch: (800) 555-0199</a>
+            <a href="tel:2122191075" class="phone-link">Direct Dispatch: 212-219-1075</a>
             <a href="#calculator-target" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Get Quote</a>
         </div>
     </header>
@@ -739,7 +738,7 @@
 
       const total = encodeURIComponent(document.getElementById('calculated-total').innerText || "Custom Quote");
 
-      window.location.href = `/get-in-touch?system=${selectedSystem}&duration=${selectedDays}&extras=${selectedExtras}&total=${total}`;
+      window.location.href = `https://www.teleprompterrental.com/get-in-touch?system=${selectedSystem}&duration=${selectedDays}&extras=${selectedExtras}&total=${total}`;
     }
 
     document.addEventListener("DOMContentLoaded", function() {
