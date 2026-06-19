@@ -6,8 +6,8 @@
     <title>Professional Teleprompter Rentals & Operators | Broadcast Grade</title>
     <style>
         :root {
-            --primary: #0066cc;
-            --primary-dark: #004499;
+            --primary: #c5a059;
+            --primary-dark: #222222;
             --dark: #111111;
             --light: #f8f9fa;
             --gray: #555555;
@@ -73,7 +73,7 @@
 
         .badge {
             display: inline-block;
-            background-color: #e6f0fa;
+            background-color: #fcf9f2;
             color: var(--primary);
             padding: 6px 16px;
             border-radius: 20px;
@@ -82,6 +82,7 @@
             margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            border: 1px solid #f0e6d2;
         }
 
         h1 {
@@ -90,7 +91,7 @@
             line-height: 1.15;
             max-width: 900px;
             margin: 0 auto 25px auto;
-            letter-spacing: -1.5px;
+            letter-spacing: -1px;
         }
 
         .hero p {
@@ -105,21 +106,19 @@
             background-color: var(--primary);
             color: white;
             padding: 16px 32px;
-            border-radius: 6px;
+            border-radius: 4px;
             font-weight: 600;
             text-decoration: none;
             transition: background 0.2s, transform 0.1s;
             border: none;
             cursor: pointer;
             font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn:hover {
             background-color: var(--primary-dark);
-        }
-
-        .btn:active {
-            transform: scale(0.98);
         }
 
         /* Trust Logos */
@@ -174,7 +173,7 @@
             margin-bottom: 35px;
             background: var(--light);
             padding: 25px;
-            border-radius: 8px;
+            border-radius: 4px;
             border-left: 4px solid var(--primary);
         }
 
@@ -189,89 +188,120 @@
             font-size: 1rem;
         }
 
-        /* Calculator Card */
-        .calc-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 40px 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        /* Widget Custom Embedded Fixes */
+        .instant-quote-widget {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 35px 30px;
+            border-radius: 4px;
+            max-width: 460px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            font-family: inherit;
+            margin: 0 auto;
             position: sticky;
             top: 100px;
             height: fit-content;
         }
 
-        .calc-card h2 {
-            font-size: 1.6rem;
-            margin-bottom: 5px;
+        .instant-quote-widget h3 {
+            margin-top: 0;
+            margin-bottom: 6px;
+            font-size: 22px;
+            font-weight: 600;
             letter-spacing: -0.5px;
+            color: #111;
         }
 
-        .calc-subtitle {
-            font-size: 0.9rem;
-            color: var(--gray);
+        .widget-subtitle {
+            font-size: 14px;
+            color: #666;
             margin-bottom: 25px;
+            line-height: 1.4;
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        .form-element {
+            margin-bottom: 18px;
         }
 
-        label {
+        .form-element label {
             display: block;
-            font-size: 0.85rem;
+            font-size: 12px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
+            color: #333;
         }
 
-        select, input[type="number"], input[type="email"], input[type="text"] {
+        .form-element select {
             width: 100%;
             padding: 12px;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 1rem;
+            border: 1px solid #cccccc;
             background-color: #fff;
-            color: var(--dark);
+            font-size: 14px;
+            color: #222;
+            border-radius: 0;
             outline: none;
         }
 
-        select:focus, input:focus {
-            border-color: var(--primary);
-        }
-
-        .price-display {
-            background-color: var(--dark);
-            color: white;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 25px;
-            margin-bottom: 25px;
+        .quote-total-box {
+            background: #111111;
+            color: #ffffff;
+            padding: 18px;
             text-align: center;
+            margin: 25px 0 12px 0;
+            border-radius: 2px;
         }
 
-        .price-label {
-            font-size: 0.85rem;
-            color: #999999;
+        .total-label {
+            display: block;
+            font-size: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            opacity: 0.7;
+            margin-bottom: 4px;
         }
 
-        .price-amount {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #ffffff;
+        #calculated-total {
+            font-size: 32px;
+            font-weight: 700;
+            display: block;
         }
 
-        .price-note {
-            font-size: 0.75rem;
-            color: #cccccc;
-            margin-top: 5px;
+        #calculated-total a {
+            color: #c5a059;
+            text-decoration: underline;
+            font-size: 20px;
         }
 
-        /* Comprehensive Fleet Grid Section */
+        .widget-disclaimer {
+            font-size: 11px;
+            color: #777;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .book-now-button {
+            width: 100%;
+            border: none !important;
+            display: block;
+            text-align: center;
+            background: #c5a059 !important;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        .book-now-button:hover {
+            background: #222222 !important;
+        }
+
+        /* Fleet Grid Section */
         .fleet-section {
             background-color: var(--light);
             padding: 80px 5%;
@@ -301,7 +331,7 @@
         .fleet-card {
             background: white;
             border: 1px solid #e1e4e8;
-            border-radius: 8px;
+            border-radius: 4px;
             padding: 30px;
             text-align: left;
             box-shadow: 0 4px 6px rgba(0,0,0,0.02);
@@ -379,7 +409,7 @@
                 grid-template-columns: 1fr;
                 gap: 50px;
             }
-            .calc-card {
+            .instant-quote-widget {
                 position: relative;
                 top: 0;
             }
@@ -398,7 +428,7 @@
         <div class="logo">Teleprompter<span>Rental</span>.com</div>
         <div class="header-contact">
             <a href="tel:18005550199" class="phone-link">Direct Dispatch: (800) 555-0199</a>
-            <a href="#quote" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Get Quote</a>
+            <a href="#calculator-target" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Get Quote</a>
         </div>
     </header>
 
@@ -406,7 +436,7 @@
         <div class="badge">Enterprise Production Support</div>
         <h1>Zero Missed Lines. Total Peace of Mind On Your Set.</h1>
         <p>We supply high-bright engineering hardware paired with technical operators who calibrate setups, manage script flow, and pace talent fluidly.</p>
-        <a href="#quote" class="btn">Configure Setup & Check Dates</a>
+        <a href="#calculator-target" class="btn">Configure Setup & Check Dates</a>
     </section>
 
     <div class="logos">
@@ -420,7 +450,7 @@
         </div>
     </div>
 
-    <main class="main-grid">
+    <main class="main-grid" id="calculator-target">
         <div class="value-prop">
             <h2>Why Production Managers and Agency Producers Book Us:</h2>
             
@@ -445,53 +475,69 @@
             </div>
         </div>
 
-        <div class="calc-card" id="quote">
-            <h2>Instant Investment Calculator</h2>
-            <div class="calc-subtitle">Configure your line configuration and estimate base costs.</div>
-            
-            <form id="rentalForm" onsubmit="event.preventDefault(); alert('Request logged! A dispatch coordinator will call your provided number within 15 minutes.');">
-                
-                <div class="form-group">
-                    <label for="gearType">Hardware Selection</label>
-                    <select id="gearType" onchange="calculatePrice()">
-                        <option value="400">Standard 15" On-Camera Rig ($400/day)</option>
-                        <option value="600">High-Bright 19" Daylight-Viewable Rig ($600/day)</option>
-                        <option value="550">Presidential Stage Glass Pair ($550/day)</option>
-                        <option value="350">Lightweight Talent Monitor (12") ($350/day)</option>
-                    </select>
-                </div>
+        <!-- INSTANT QUOTE WIDGET BLOCK -->
+        <div class="instant-quote-widget">
+          <h3>Instant Rate Calculator</h3>
+          <p class="widget-subtitle">Select your production setup to view standard base rates.</p>
 
-                <div class="form-group">
-                    <label for="operatorOption">Crewing Requirements</label>
-                    <select id="operatorOption" onchange="calculatePrice()">
-                        <option value="550">Add Professional Operator & Tech (+$550/day)</option>
-                        <option value="0">Dry Hire Setup Only (Equipment Only)</option>
-                    </select>
-                </div>
+          <div class="form-element">
+            <label for="prompter-type">Teleprompter System:</label>
+            <select id="prompter-type" onchange="handleSystemChange()">
+              <option value="995">Standard “Through-the-lens” Teleprompter — $995</option>
+              <option value="1295">Basic Presidential Prompter — $1,295</option>
+              <option value="1795">Robotic Rise & Fall Presidential Prompter — $1,795</option>
+              <option value="1295">Downstage Monitor (DSM) Kit (2 Monitors + Operator) — $1,295</option>
+              <option value="995">Confidence Monitor (32”) — $995</option>
+              <option value="1295">Confidence Monitor (40”) — $1,295</option>
+              <option value="1495">Confidence Monitor (50”) — $1,495</option>
+              <option value="1795">Confidence Monitor (80”) — $1,795</option>
+              <option value="1295">Interrotron Mark III — $1,295</option>
+              <option value="1295">Interrotron Mark II aka “Road Warrior” — $1,295</option>
+              <option value="295">EyeDirect (Self-Operating) — $295 / 24-hrs</option>
+              <option value="295">iPad Prompter Pro (Self-Operated) — $295 / 24-hrs</option>
+              <option value="995">The SteadiCam Prompter — $995</option>
+              <option value="995">Jib Prompter — $995</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label for="days">Booking Duration (Days)</label>
-                    <input type="number" id="days" value="1" min="1" max="30" oninput="calculatePrice()">
-                </div>
+          <div class="form-element" id="extra-monitors-wrapper" style="display: none;">
+            <label id="extra-monitors-label" for="extra-monitors">Additional Monitors:</label>
+            <select id="extra-monitors" onchange="calculateLiveQuote()"></select>
+          </div>
 
-                <div class="price-display">
-                    <div class="price-label">Estimated Allocation</div>
-                    <div class="price-amount" id="totalPrice">$950</div>
-                    <div class="price-note">Multi-day structural discount automatically applied</div>
-                </div>
+          <div class="form-element">
+            <label for="shoot-days">Rental Duration:</label>
+            <select id="shoot-days" onchange="calculateLiveQuote()">
+              <option value="1">1 Day</option>
+              <option value="2">2 Days</option>
+              <option value="3">3 Days (10% Off Day 3 Only)</option>
+              <option value="4">4 Days (15% Off Day 4 Only)</option>
+              <option value="5">5 Days (20% Off Day 5 Only)</option>
+              <option value="custom">6+ Days (Contact for Rates)</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label for="clientName">Full Name / Producer</label>
-                    <input type="text" id="clientName" placeholder="Sarah Jenkins" required>
-                </div>
+          <div class="form-element" id="hours-wrapper">
+            <label for="shoot-hours">Estimated Day Length:</label>
+            <select id="shoot-hours" onchange="calculateLiveQuote()">
+              <option value="0">Standard 10-Hour Day (Base)</option>
+              <option value="135">11 Hours (1 hr Overtime/day)</option>
+              <option value="270">12 Hours (2 hrs Overtime/day)</option>
+              <option value="405">13 Hours (3 hrs Overtime/day)</option>
+              <option value="540">14 Hours (4 hrs Overtime/day)</option>
+            </select>
+          </div>
 
-                <div class="form-group">
-                    <label for="clientEmail">Production Email</label>
-                    <input type="email" id="clientEmail" placeholder="s.jenkins@productioncompany.com" required>
-                </div>
+          <div class="quote-total-box">
+            <span class="total-label" id="total-box-label">Estimated Base Cost</span>
+            <span id="calculated-total">$995</span>
+          </div>
 
-                <button type="submit" class="btn" style="width: 100%;">Verify Fleet Availability</button>
-            </form>
+          <p class="widget-disclaimer" id="widget-disclaimer-text">
+            *Rates reflect standard 10-hour days including a professional operator, or flat 24-hour cycles for self-operated gear. Final transit, parking, or specific multi-day logistics will be finalized by our team.
+          </p>
+
+          <button type="button" class="book-now-button" onclick="saveQuoteAndGo()">Secure This Setup & Request Booking</button>
         </div>
     </main>
 
@@ -560,27 +606,145 @@
         <p>&copy; 2026 TeleprompterRental.com. All Rights Reserved. All equipment deployments subject to regional logistics availability and booking confirmations.</p>
     </footer>
 
+    <!-- WIDGET SCRIPT LOGIC -->
     <script>
-        function calculatePrice() {
-            const gearBase = parseFloat(document.getElementById('gearType').value);
-            const operatorBase = parseFloat(document.getElementById('operatorOption').value);
-            const days = parseInt(document.getElementById('days').value) || 1;
-            
-            let dailyRate = gearBase + operatorBase;
-            
-            // Scaled Multi-day volume breaks
-            if (days >= 3 && days < 5) {
-                dailyRate = dailyRate * 0.90; // 10% volume discount
-            } else if (days >= 5) {
-                dailyRate = dailyRate * 0.85; // 15% volume discount
-            }
-            
-            const finalTotal = Math.round(dailyRate * days);
-            document.getElementById('totalPrice').innerText = '$' + finalTotal.toLocaleString();
+    function handleSystemChange() {
+      const systemSelect = document.getElementById('prompter-type');
+      const selectedText = systemSelect.options[systemSelect.selectedIndex].text;
+      const extraMonitorsWrapper = document.getElementById('extra-monitors-wrapper');
+      const extraMonitorsLabel = document.getElementById('extra-monitors-label');
+      const extraMonitorsSelect = document.getElementById('extra-monitors');
+      const hoursWrapper = document.getElementById('hours-wrapper');
+      const hoursSelect = document.getElementById('shoot-hours');
+
+      if (selectedText.includes("Downstage Monitor")) {
+        extraMonitorsWrapper.style.display = "block";
+        extraMonitorsLabel.innerText = "Additional DSM Monitors:";
+        extraMonitorsSelect.innerHTML = `
+          <option value="0">None (Includes Base 2 Monitors)</option>
+          <option value="195">1 Additional Monitor (3 Total) — +$195/day</option>
+          <option value="390">2 Additional Monitors (4 Total) — +$390/day</option>
+          <option value="585">3 Additional Monitors (5 Total) — +$585/day</option>
+          <option value="780">4 Additional Monitors (6 Total) — +$780/day</option>
+        `;
+      } else if (selectedText.includes("Confidence Monitor")) {
+        extraMonitorsWrapper.style.display = "block";
+        extraMonitorsLabel.innerText = "Additional Monitors & Stands:";
+
+        let addOnPrice = 195;
+        let sizeText = '32”';
+
+        if (selectedText.includes("40”")) {
+          addOnPrice = 245;
+          sizeText = '40”';
+        } else if (selectedText.includes("50”")) {
+          addOnPrice = 295;
+          sizeText = '50”';
+        } else if (selectedText.includes("80”")) {
+          addOnPrice = 345;
+          sizeText = '80”';
         }
-        
-        // Initial Calculation Hook Run
-        calculatePrice();
+
+        extraMonitorsSelect.innerHTML = `
+          <option value="0">None (Includes 1 Base Monitor)</option>
+          <option value="${addOnPrice}">1 Extra ${sizeText} Monitor & Stand — +$${addOnPrice}/day</option>
+          <option value="${addOnPrice * 2}">2 Extra ${sizeText} Monitors & Stands — +$${addOnPrice * 2}/day</option>
+          <option value="${addOnPrice * 3}">3 Extra ${sizeText} Monitors & Stands — +$${addOnPrice * 3}/day</option>
+        `;
+      } else {
+        extraMonitorsWrapper.style.display = "none";
+        extraMonitorsSelect.innerHTML = '<option value="0">None</option>';
+        extraMonitorsSelect.value = "0";
+      }
+
+      if (selectedText.includes("24-hrs")) {
+        hoursWrapper.style.display = "none";
+        hoursSelect.value = "0";
+      } else if (document.getElementById('shoot-days').value !== "custom") {
+        hoursWrapper.style.display = "block";
+      }
+
+      calculateLiveQuote();
+    }
+
+    function calculateLiveQuote() {
+      const daysValue = document.getElementById('shoot-days').value;
+      const hoursWrapper = document.getElementById('hours-wrapper');
+      const totalBoxLabel = document.getElementById('total-box-label');
+      const calculatedTotalDisplay = document.getElementById('calculated-total');
+      const systemSelect = document.getElementById('prompter-type');
+      const selectedText = systemSelect.options[systemSelect.selectedIndex].text;
+
+      if (daysValue === "custom") {
+        hoursWrapper.style.display = "none";
+        totalBoxLabel.innerText = "Long-Term Rental Rate";
+        calculatedTotalDisplay.innerHTML = '<a href="mailto:info@americanmovieco.com">info@americanmovieco.com</a>';
+        return;
+      }
+
+      const isSelfOperated = selectedText.includes("24-hrs");
+      if (isSelfOperated) { hoursWrapper.style.display = "none"; } else { hoursWrapper.style.display = "block"; }
+
+      const basePrice = parseFloat(systemSelect.value);
+      const extraMonitorsPricePerDay = parseFloat(document.getElementById('extra-monitors').value || 0);
+      const overtimePricePerDay = parseFloat(document.getElementById('shoot-hours').value);
+      const totalDays = parseFloat(daysValue);
+
+      let total = 0;
+      const dailyBaseRate = basePrice + overtimePricePerDay;
+
+      for (let currentDay = 1; currentDay <= totalDays; currentDay++) {
+        let dayRateModifier = 1.00;
+
+        if (!isSelfOperated) {
+          if (totalDays === 3 && currentDay === 3) {
+            dayRateModifier = 0.90;
+          } else if (totalDays === 4 && currentDay === 4) {
+            dayRateModifier = 0.85;
+          } else if (totalDays === 5 && currentDay === 5) {
+            dayRateModifier = 0.80;
+          }
+        }
+
+        total += (dailyBaseRate * dayRateModifier) + extraMonitorsPricePerDay;
+      }
+
+      if (!isSelfOperated && totalDays === 3) {
+        totalBoxLabel.innerText = "Estimated Cost (10% Off Day 3 Applied)";
+      } else if (!isSelfOperated && totalDays === 4) {
+        totalBoxLabel.innerText = "Estimated Cost (15% Off Day 4 Applied)";
+      } else if (!isSelfOperated && totalDays === 5) {
+        totalBoxLabel.innerText = "Estimated Cost (20% Off Day 5 Applied)";
+      } else {
+        totalBoxLabel.innerText = "Estimated Base Cost";
+      }
+
+      const finalFormattedPrice = '$' + Math.round(total).toLocaleString();
+      calculatedTotalDisplay.innerText = finalFormattedPrice;
+    }
+
+    function saveQuoteAndGo() {
+      calculateLiveQuote();
+
+      const systemSelect = document.getElementById('prompter-type');
+      const selectedSystem = encodeURIComponent(systemSelect.options[systemSelect.selectedIndex].text);
+
+      const extraMonitorSelect = document.getElementById('extra-monitors');
+      const selectedExtras = encodeURIComponent(extraMonitorSelect.options[extraMonitorSelect.selectedIndex]
+        ? extraMonitorSelect.options[extraMonitorSelect.selectedIndex].text
+        : "None");
+
+      const daysSelect = document.getElementById('shoot-days');
+      const selectedDays = encodeURIComponent(daysSelect.options[daysSelect.selectedIndex].text);
+
+      const total = encodeURIComponent(document.getElementById('calculated-total').innerText || "Custom Quote");
+
+      window.location.href = `/get-in-touch?system=${selectedSystem}&duration=${selectedDays}&extras=${selectedExtras}&total=${total}`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      handleSystemChange();
+    });
     </script>
 </body>
 </html>
