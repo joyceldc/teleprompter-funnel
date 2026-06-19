@@ -729,8 +729,8 @@
   const selectedSystem = systemSelect.options[systemSelect.selectedIndex].text;
 
   const extraMonitorSelect = document.getElementById('extra-monitors');
-  const selectedExtras = extraMonitorSelect.options[extraMonitorSelect.selectedIndex]
-    ? extraMonitorSelect.options[extraMonitorSelect.selectedIndex].text
+  const selectedExtras = extraMonitorSelect.options[extraMonitorSelect.selectedIndex] 
+    ? extraMonitorSelect.options[extraMonitorSelect.selectedIndex].text 
     : "None";
 
   const daysSelect = document.getElementById('shoot-days');
@@ -738,14 +738,14 @@
 
   const total = document.getElementById('calculated-total').innerText || "Custom Quote";
 
-  // Save data seamlessly into browser session memory
+  // Hold data in browser tab memory
   sessionStorage.setItem('calc_system', selectedSystem);
   sessionStorage.setItem('calc_duration', selectedDays);
   sessionStorage.setItem('calc_extras', selectedExtras);
   sessionStorage.setItem('calc_total', total);
 
-  // Redirect to a completely clean URL with no messy question marks
-  window.location.href = 'https://www.teleprompterrental.com/get-in-touch?';
+// Redirect to a completely clean URL with no messy question marks
+  window.location.href = 'https://www.teleprompterrental.com/get-in-touch';
 }
 
     document.addEventListener("DOMContentLoaded", function() {
