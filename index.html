@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Teleprompter Rentals & Operators | Broadcast Grade</title>
+    <style>
+        :root {
+            --primary: #0066cc;
+            --primary-dark: #004499;
+            --dark: #111111;
+            --light: #f8f9fa;
+            --gray: #555555;
+            --light-gray: #eef2f7;
+            --border: #cccccc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            border-bottom: 1px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone-link {
+            font-weight: 700;
+            color: var(--dark);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 5%;
+            text-align: center;
+            background: linear-gradient(180deg, #ffffff 0%, var(--light) 100%);
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #e6f0fa;
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            max-width: 900px;
+            margin: 0 auto 25px auto;
+            letter-spacing: -1.5px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.05rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Trust Logos */
+        .logos {
+            padding: 40px 5%;
+            text-align: center;
+            background-color: white;
+        }
+
+        .logos p {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999999;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .logo-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .logo-item {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #bbbbbb;
+            letter-spacing: -0.5px;
+        }
+
+        /* Main Conversion Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .value-prop h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            letter-spacing: -0.8px;
+            line-height: 1.2;
+        }
+
+        .feature {
+            margin-bottom: 35px;
+            background: var(--light);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .feature h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .feature p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Calculator Card */
+        .calc-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .calc-card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .calc-subtitle {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        select, input[type="number"], input[type="email"], input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #fff;
+            color: var(--dark);
+            outline: none;
+        }
+
+        select:focus, input:focus {
+            border-color: var(--primary);
+        }
+
+        .price-display {
+            background-color: var(--dark);
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .price-label {
+            font-size: 0.85rem;
+            color: #999999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .price-amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .price-note {
+            font-size: 0.75rem;
+            color: #cccccc;
+            margin-top: 5px;
+        }
+
+        /* Comprehensive Fleet Grid Section */
+        .fleet-section {
+            background-color: var(--light);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .fleet-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            letter-spacing: -0.8px;
+        }
+
+        .fleet-subtitle {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+        }
+
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fleet-card {
+            background: white;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .fleet-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 10px;
+        }
+
+        .fleet-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .fleet-card ul li {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 5%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 5px;
+            letter-spacing: -0.8px;
+        }
+
+        .faq-grid {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 25px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .faq-item p {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #888888;
+            padding: 40px 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #222222;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            .calc-card {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.25rem; }
+            .hero { padding: 50px 5%; }
+            .main-grid { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Teleprompter<span>Rental</span>.com</div>
+        <div class="header-contact">
+            <a href="tel:18005550199" class="phone-link">Direct Dispatch: (800) 555-0199</a>
+            <a href="#quote" class="btn" style="padding: 10px 20px; font-size: 0.9rem;">Get Quote</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="badge">Enterprise Production Support</div>
+        <h1>Zero Missed Lines. Total Peace of Mind On Your Set.</h1>
+        <p>We supply high-bright engineering hardware paired with technical operators who calibrate setups, manage script flow, and pace talent fluidly.</p>
+        <a href="#quote" class="btn">Configure Setup & Check Dates</a>
+    </section>
+
+    <div class="logos">
+        <p>Trusted On Set By Creative Professionals At</p>
+        <div class="logo-grid">
+            <div class="logo-item">NETFLIX</div>
+            <div class="logo-item">HBO MAX</div>
+            <div class="logo-item">WALT DISNEY</div>
+            <div class="logo-item">NBC UNIVERSAL</div>
+            <div class="logo-item">APPLE TV+</div>
+        </div>
+    </div>
+
+    <main class="main-grid">
+        <div class="value-prop">
+            <h2>Why Production Managers and Agency Producers Book Us:</h2>
+            
+            <div class="feature">
+                <h3>✓ Full Hot-Swappable Backups on Set</h3>
+                <p>Every equipment deployment rolls out with complete localized equipment backups. If a high-bright panel interface or monitoring matrix experiences a fault, your crew stays up and running.</p>
+            </div>
+
+            <div class="feature">
+                <h3>✓ Active Pacing & Talent Management</h3>
+                <p>Our technicians are seasoned production crew members. They actively adapt reading layouts to speaker speeds, comfortably field last-minute script changes, and keep executive talent relaxed.</p>
+            </div>
+
+            <div class="feature">
+                <h3>✓ Universal Camera Match Payloads</h3>
+                <p>Whether configuring around lightweight mirrorless gimbals, heavy studio box lenses, or intricate Steadicam configurations, our rigs use modular rails to align perfectly with your glass.</p>
+            </div>
+
+            <div class="feature">
+                <h3>✓ Insured & Localized Delivery</h3>
+                <p>We carry full equipment and liability insurance required by major commercial soundstages and corporate facility protocols. We show up pre-assembled, on-time, and show-ready.</p>
+            </div>
+        </div>
+
+        <div class="calc-card" id="quote">
+            <h2>Instant Investment Calculator</h2>
+            <div class="calc-subtitle">Configure your line configuration and estimate base costs.</div>
+            
+            <form id="rentalForm" onsubmit="event.preventDefault(); alert('Request logged! A dispatch coordinator will call your provided number within 15 minutes.');">
+                
+                <div class="form-group">
+                    <label for="gearType">Hardware Selection</label>
+                    <select id="gearType" onchange="calculatePrice()">
+                        <option value="400">Standard 15" On-Camera Rig ($400/day)</option>
+                        <option value="600">High-Bright 19" Daylight-Viewable Rig ($600/day)</option>
+                        <option value="550">Presidential Stage Glass Pair ($550/day)</option>
+                        <option value="350">Lightweight Talent Monitor (12") ($350/day)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="operatorOption">Crewing Requirements</label>
+                    <select id="operatorOption" onchange="calculatePrice()">
+                        <option value="550">Add Professional Operator & Tech (+$550/day)</option>
+                        <option value="0">Dry Hire Setup Only (Equipment Only)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="days">Booking Duration (Days)</label>
+                    <input type="number" id="days" value="1" min="1" max="30" oninput="calculatePrice()">
+                </div>
+
+                <div class="price-display">
+                    <div class="price-label">Estimated Allocation</div>
+                    <div class="price-amount" id="totalPrice">$950</div>
+                    <div class="price-note">Multi-day structural discount automatically applied</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientName">Full Name / Producer</label>
+                    <input type="text" id="clientName" placeholder="Sarah Jenkins" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientEmail">Production Email</label>
+                    <input type="email" id="clientEmail" placeholder="s.jenkins@productioncompany.com" required>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%;">Verify Fleet Availability</button>
+            </form>
+        </div>
+    </main>
+
+    <section class="fleet-section">
+        <h2>Our Specialized Rigging Fleet</h2>
+        <div class="fleet-subtitle">We stock premium, high-contrast, multi-payload configurations engineered for specific production requirements.</div>
+        
+        <div class="fleet-grid">
+            <div class="fleet-card">
+                <h3>Through-The-Lens Rigs</h3>
+                <p>Ideal for direct-to-camera commercial addresses, corporate messages, and feature narratives.</p>
+                <ul>
+                    <li>• 15" or 19" High-Bright Panels</li>
+                    <li>• Ultra-Clear 60/40 Beam Splitter Glass</li>
+                    <li>• 15mm/19mm Modular Rod Support Bases</li>
+                    <li>• Hood structures fit wide lenses up to 16mm</li>
+                </ul>
+            </div>
+            
+            <div class="fleet-card">
+                <h3>Presidential Systems</h3>
+                <p>Optimized for live stage venues, executive annual keynotes, and award galas.</p>
+                <ul>
+                    <li>• Dual-Stand Split System Layouts</li>
+                    <li>• Highly Transparent Polish Finishes</li>
+                    <li>• Low-Profile High-Lumen Display Boxes</li>
+                    <li>• Rapid Physical Angle Adjustments</li>
+                </ul>
+            </div>
+            
+            <div class="fleet-card">
+                <h3>Jib & Steadicam Builds</h3>
+                <p>Engineered for complex dynamic movement tracks where weight distribution is vital.</p>
+                <ul>
+                    <li>• Carbon-Fiber Lightweight Platforms</li>
+                    <li>• Wireless SDI/HDMI Video Signal Receivers</li>
+                    <li>• Counterweighted Custom Battery Brackets</li>
+                    <li>• High-Nit Daylight Visibility Displays</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Fleet Questions</h2>
+        
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>What happens if a script is modified live on set?</h3>
+                <p>Our dedicated operators manipulate script layouts via industry-standard prompting engines. They process text variations, shift run orders, and handle font layouts immediately upon request without disrupting the talent.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Are your monitoring systems compatible with all cinema cameras?</h3>
+                <p>Yes. Our sled systems accommodate everything from compact mirrorless form factors up to oversized studio structures using full baseplate standard rails. We take power via standard inputs and accept direct SDI or HDMI feeds.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How do your multi-day booking discounts scale?</h3>
+                <p>Our system integrates a multi-day discount curve directly into structural estimates. Bookings running 3-4 days receive a 10% daily rate reduction, and configurations running 5 days or longer scale to a 15% rate discount automatically calculated on checkout.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TeleprompterRental.com. All Rights Reserved. All equipment deployments subject to regional logistics availability and booking confirmations.</p>
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            const gearBase = parseFloat(document.getElementById('gearType').value);
+            const operatorBase = parseFloat(document.getElementById('operatorOption').value);
+            const days = parseInt(document.getElementById('days').value) || 1;
+            
+            let dailyRate = gearBase + operatorBase;
+            
+            // Scaled Multi-day volume breaks
+            if (days >= 3 && days < 5) {
+                dailyRate = dailyRate * 0.90; // 10% volume discount
+            } else if (days >= 5) {
+                dailyRate = dailyRate * 0.85; // 15% volume discount
+            }
+            
+            const finalTotal = Math.round(dailyRate * days);
+            document.getElementById('totalPrice').innerText = '$' + finalTotal.toLocaleString();
+        }
+        
+        // Initial Calculation Hook Run
+        calculatePrice();
+    </script>
+</body>
+</html>
