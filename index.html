@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Teleprompter Rentals & Operators | Broadcast Grade</title>
@@ -176,7 +174,7 @@
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 60px;
-            padding: 80px 5%;
+            padding: 80px 5% 40px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -210,6 +208,13 @@
         .feature p {
             color: var(--gray);
             font-size: 1rem;
+        }
+
+        /* Extra Sections Outside Grid */
+        .media-section, .faq-section, .bottom-cta-section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         /* Widget CSS Layout Styles */
@@ -378,9 +383,7 @@
             .main-grid { padding: 40px 5%; }
             .header-contact .phone-link { display: none; }
         }
-    </style>
-</head>
-<body>
+    </style></head><body>
 
     <header>
         <div class="logo">Teleprompter<span>Rental</span>.com</div>
@@ -502,57 +505,6 @@
                 <h3>✓ Nationwide Production Support</h3>
                 <p>We support productions in major media markets including New York, Los Angeles, San Francisco, Atlanta, Austin, Chicago, and beyond.</p>
             </div>
-
-            <div style="margin-top: 40px; border-top: 1px solid var(--light-gray); padding-top: 30px;">
-                <h3 style="font-size: 1.25rem; margin-bottom: 15px; font-weight: 700; letter-spacing: -0.3px;">See Our Equipment In Action:</h3>
-                <div style="padding:56.25% 0 0 0; position:relative; background-color:#000; border-radius:4px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
-                    <iframe src="https://player.vimeo.com/video/1180435596?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-                            frameborder="0" 
-                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
-                            style="position:absolute; top:0; left:0; width:100%; height:100%;" 
-                            title="Teleprompter & Studio Overview">
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="feature" style="margin-top: 40px; border-left: none; background: transparent; padding: 0;">
-                <h2 style="margin-bottom: 25px;">Frequently Asked Questions</h2>
-
-                <div style="margin-bottom: 25px;">
-                    <h3 style="font-size: 1.25rem; margin-bottom: 5px;">Can the audience see the script?</h3>
-                    <p style="color: var(--gray);">No. The script is visible to the speaker via specialized optical beam-splitter glass, completely transparent to the audience.</p>
-                </div>
-
-                <div style="margin-bottom: 25px;">
-                    <h3 style="font-size: 1.25rem; margin-bottom: 5px;">Do I need a teleprompter operator?</h3>
-                    <p style="color: var(--gray);">For most professional shoots and live events, yes. An operator keeps the script moving naturally, dynamically matching the speaker's scrolling pace.</p>
-                </div>
-
-                <div style="margin-bottom: 25px;">
-                    <h3 style="font-size: 1.25rem; margin-bottom: 5px;">Can you make script changes during the shoot?</h3>
-                    <p style="color: var(--gray);">Yes. Script changes can be made on set instantly by our technical operator so your speaker can continue smoothly.</p>
-                </div>
-
-                <div style="margin-bottom: 25px;">
-                    <h3 style="font-size: 1.25rem; margin-bottom: 5px;">How do your multi-day booking discounts scale?</h3>
-                    <p style="color: var(--gray);">Our pricing structure integrates automatic multi-day rewards on consecutive shoot dates:<br><br>
-                    <strong>Day 3:</strong> 10% off Day 3's rate only<br>
-                    <strong>Day 4:</strong> 15% off Day 4's rate only<br>
-                    <strong>Day 5:</strong> 20% off Day 5's rate only<br><br>
-                    These precise tiered reductions are automatically figured into your calculator total.</p>
-                </div>
-
-                <div style="margin-bottom: 25px;">
-                    <h3 style="font-size: 1.25rem; margin-bottom: 5px;">How do I know which teleprompter to choose?</h3>
-                    <p style="color: var(--gray);">Use the interactive calculator widget or contact our dispatch team. We will recommend the correct setup based on your camera, event type, and speaker needs.</p>
-                </div>
-            </div>
-
-            <div class="feature" style="margin-top: 40px; background:#f7f7f7; padding:25px; border-radius:6px; border-left: 4px solid var(--primary);">
-                <h2>Ready To Look Confident On Camera?</h2>
-                <p style="margin-bottom: 20px; color: var(--gray);">Tell us your city, shoot date, number of speakers, camera setup, and event type. We’ll match you with the right teleprompter system.</p>
-                <a href="#calculator-target" class="btn">Start Your Quote</a>
-            </div>
         </div>
 
         <div class="instant-quote-widget">
@@ -631,6 +583,64 @@
             </div>
         </div>
     </main>
+
+    <!-- NEW SECTION: Media Showcase Showcase -->
+    <section class="media-section" style="border-top: 1px solid var(--light-gray);">
+        <h3 style="font-size: 1.75rem; margin-bottom: 20px; font-weight: 700; letter-spacing: -0.3px; text-align: center;">See Our Equipment In Action:</h3>
+        <div style="max-width: 800px; margin: 0 auto; padding:56.25% 0 0 0; position:relative; background-color:#000; border-radius:4px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+            <iframe src="https://player.vimeo.com/video/1180435596?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+                    style="position:absolute; top:0; left:0; width:100%; height:100%;" 
+                    title="Teleprompter & Studio Overview">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Frequently Asked Questions -->
+    <section class="faq-section" style="border-top: 1px solid var(--light-gray); background-color: var(--light);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="margin-bottom: 35px; text-align: center; font-size: 2.2rem;">Frequently Asked Questions</h2>
+
+            <div style="margin-bottom: 25px; background: #fff; padding: 20px; border-radius: 4px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 5px;">Can the audience see the script?</h3>
+                <p style="color: var(--gray);">No. The script is visible to the speaker via specialized optical beam-splitter glass, completely transparent to the audience.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; background: #fff; padding: 20px; border-radius: 4px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 5px;">Do I need a teleprompter operator?</h3>
+                <p style="color: var(--gray);">For most professional shoots and live events, yes. An operator keeps the script moving naturally, dynamically matching the speaker's scrolling pace.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; background: #fff; padding: 20px; border-radius: 4px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 5px;">Can you make script changes during the shoot?</h3>
+                <p style="color: var(--gray);">Yes. Script changes can be made on set instantly by our technical operator so your speaker can continue smoothly.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; background: #fff; padding: 20px; border-radius: 4px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 5px;">How do your multi-day booking discounts scale?</h3>
+                <p style="color: var(--gray);">Our pricing structure integrates automatic multi-day rewards on consecutive shoot dates:<br><br>
+                <strong>Day 3:</strong> 10% off Day 3's rate only<br>
+                <strong>Day 4:</strong> 15% off Day 4's rate only<br>
+                <strong>Day 5:</strong> 20% off Day 5's rate only<br><br>
+                These precise tiered reductions are automatically figured into your calculator total.</p>
+            </div>
+
+            <div style="margin-bottom: 25px; background: #fff; padding: 20px; border-radius: 4px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 5px;">How do I know which teleprompter to choose?</h3>
+                <p style="color: var(--gray);">Use the interactive calculator widget or contact our dispatch team. We will recommend the correct setup based on your camera, event type, and speaker needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Final Call to Action Block -->
+    <section class="bottom-cta-section" style="text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto; background:#f7f7f7; padding:40px; border-radius:6px; border-left: 4px solid var(--primary); text-align: left;">
+            <h2 style="margin-bottom: 15px;">Ready To Look Confident On Camera?</h2>
+            <p style="margin-bottom: 25px; color: var(--gray); font-size: 1.1rem;">Tell us your city, shoot date, number of speakers, camera setup, and event type. We’ll match you with the right teleprompter system.</p>
+            <a href="#calculator-target" class="btn">Start Your Quote</a>
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2026 TeleprompterRental.com. All Rights Reserved. All equipment deployments subject to regional logistics availability and booking confirmations.</p>
@@ -774,8 +784,4 @@
     document.addEventListener("DOMContentLoaded", function() {
       handleSystemChange();
     });
-    </script>
-</body>
-</html>
-
-```
+    </script></body></html>
